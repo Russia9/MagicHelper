@@ -12,13 +12,15 @@ $ java -jar MagicHelper.jar
 ```
 
 ## Controls 
-1. **Autoclicker**
+1. **Main Controls**
+   - Disabling the program - RControl + Esacpe
+2. **Autoclicker**
    - Mouse button 1
      - On/Off - Mouse button 2
    - Custom button
      - On - Mouse button 2 + Right button
      - Off -  Mouse button 2
-2. **Auto mining**
+3. **Auto mining**
    - Horizontal mining
      - On - RControl + W
      - Off - Mouse button 2
