@@ -12,7 +12,7 @@ $ java -jar MagicHelper.jar
 ```
 
 ## Controls 
-1. **Autoclicker**
+1. **Autoclicker** `TODO`
    - Mouse button 1
      - On/Off - Mouse button 2
    - Custom button
