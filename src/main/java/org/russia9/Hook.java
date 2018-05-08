@@ -4,12 +4,12 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 import org.jnativehook.mouse.NativeMouseEvent;
 import org.jnativehook.mouse.NativeMouseInputListener;
-import org.russia9.autoClicker.Clicker;
 
 import java.awt.*;
 import java.util.Set;
 
-import static org.russia9.lib.Reference.*;
+import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON;
+import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_TIME;
 
 
 /**
@@ -38,10 +38,16 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
 
     @Override
     public void nativeMouseClicked(NativeMouseEvent nativeMouseEvent) {
-        if(nativeMouseEvent.getButton() == AUTOCLICKER_DEFAULT_ACTIVATE_BUTTON) {
+        if (nativeMouseEvent.getButton() == NativeMouseEvent.BUTTON2) {
             Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
-            if(threadSet.size() > 1) { //Stop threads
+            if (threadSet.size() > 2) { //Stop threads
                 Manager.clicker.stop();
+            } else {
+                try {
+                    Manager.clicker.start(0, AUTOCLICKER_DEFAULT_CLICK_BUTTON, AUTOCLICKER_DEFAULT_CLICK_TIME);
+                } catch (AWTException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

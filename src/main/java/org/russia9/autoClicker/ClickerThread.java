@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class ClickerThread extends Thread {
     private int type, button, time;
-    Robot clicker;
+    private Robot clicker;
 
     public ClickerThread(int type, int button, int time) throws AWTException {
         this.type = type;
