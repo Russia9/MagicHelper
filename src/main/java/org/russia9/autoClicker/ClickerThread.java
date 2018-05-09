@@ -3,19 +3,27 @@ package org.russia9.autoClicker;
 import java.awt.*;
 
 public class ClickerThread extends Thread {
+    boolean alive = false;
     private int type, button, time;
+    private boolean stop = false;
     private Robot clicker;
 
-    public ClickerThread(int type, int button, int time) throws AWTException {
+    ClickerThread(int type, int button, int time) throws AWTException {
         this.type = type;
         this.button = button;
         this.time = time;
         clicker = new Robot();
+        this.setName("Autoclicker Thread");
+    }
+
+    public void finish() {
+        stop = true;
     }
 
     @Override
     public void run() {
-        do {
+        alive = true;
+        while (!stop) {
             try {
                 switch (type) {
                     case 0: // Mouse
@@ -35,6 +43,8 @@ public class ClickerThread extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        } while (true);
+        }
+        clicker.mouseRelease(button);
+        alive = false;
     }
 }

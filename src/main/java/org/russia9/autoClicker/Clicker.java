@@ -6,6 +6,7 @@ import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON;
 import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_TIME;
 
 public class Clicker {
+    boolean alive = false;
     private ClickerThread clicker;
 
     /**
@@ -15,15 +16,20 @@ public class Clicker {
      *               0 for mouse
      *               1 for keyboard
      * @param button Autoclicker will clicks those button
-     * @param time
+     * @param time   time between clicks
      */
     public void start(int type, int button, int time) throws AWTException {
         clicker = new ClickerThread(type, button, time);
         clicker.start();
+        alive = true;
     }
 
     public void start() throws AWTException {
         start(0, AUTOCLICKER_DEFAULT_CLICK_BUTTON, AUTOCLICKER_DEFAULT_CLICK_TIME);
+    }
+
+    public boolean isAlive() {
+        return alive;
     }
 
     /**
@@ -31,5 +37,6 @@ public class Clicker {
      */
     public void stop() {
         clicker.stop();
+        alive = false;
     }
 }

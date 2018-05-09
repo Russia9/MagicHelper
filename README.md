@@ -13,18 +13,18 @@ $ java -jar MagicHelper.jar
 
 ## Controls 
 1. **Autoclicker** `TODO`
-   - Mouse button 1
-     - On/Off - Mouse button 2
+   - Mouse button 1 `DONE`
+     - On/Off - Middle mouse button 
    - Custom button
-     - On - Mouse button 2 + Right button
-     - Off -  Mouse button 2
+     - On - Middle mouse button + Right button
+     - Off -  Middle mouse button
 2. **Auto mining**
    - Horizontal mining
      - On - RControl + W
-     - Off - Mouse button 2
+     - Off - Middle mouse button
    - Vertical mining
      - On - RControl + D
-     - Off - Mouse button 2
+     - Off - Middle mouse button
    - Smart mining
      - On - RControl + S
-     - Off - Mouse button 2
+     - Off - Middle mouse button

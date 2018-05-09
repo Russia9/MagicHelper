@@ -6,10 +6,6 @@ import org.jnativehook.mouse.NativeMouseEvent;
 import org.jnativehook.mouse.NativeMouseInputListener;
 
 import java.awt.*;
-import java.util.Set;
-
-import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON;
-import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_TIME;
 
 
 /**
@@ -28,38 +24,43 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
 
     @Override
     public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
-
-    }
-
-    @Override
-    public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
-
-    }
-
-    @Override
-    public void nativeMouseClicked(NativeMouseEvent nativeMouseEvent) {
-        if (nativeMouseEvent.getButton() == NativeMouseEvent.BUTTON2) {
-            Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
-            if (threadSet.size() > 2) { //Stop threads
-                Manager.clicker.stop();
-            } else {
-                try {
-                    Manager.clicker.start(0, AUTOCLICKER_DEFAULT_CLICK_BUTTON, AUTOCLICKER_DEFAULT_CLICK_TIME);
-                } catch (AWTException e) {
-                    e.printStackTrace();
-                }
-            }
+        try {
+            Main.manager.keyPressed(nativeKeyEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
-    public void nativeMousePressed(NativeMouseEvent nativeMouseEvent) {
+    public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
+        try {
+            Main.manager.keyReleased(nativeKeyEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void nativeMouseClicked(NativeMouseEvent nativeMouseEvent) {
 
     }
 
     @Override
-    public void nativeMouseReleased(NativeMouseEvent nativeMouseEvent) {
+    public void nativeMousePressed(NativeMouseEvent nativeMouseEvent) {
+        try {
+            Main.manager.mousePressed(nativeMouseEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
 
+    @Override
+    public void nativeMouseReleased(NativeMouseEvent nativeMouseEvent) {
+        try {
+            Main.manager.mouseReleased(nativeMouseEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
