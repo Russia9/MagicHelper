@@ -5,6 +5,9 @@ import org.jnativehook.keyboard.NativeKeyListener;
 import org.jnativehook.mouse.NativeMouseEvent;
 import org.jnativehook.mouse.NativeMouseInputListener;
 
+import java.awt.*;
+
+
 /**
  * <p>Class for capture key combinations.</p>
  *
@@ -21,12 +24,20 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
 
     @Override
     public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
-
+        try {
+            Main.manager.keyPressed(nativeKeyEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
-
+        try {
+            Main.manager.keyReleased(nativeKeyEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -36,12 +47,20 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
 
     @Override
     public void nativeMousePressed(NativeMouseEvent nativeMouseEvent) {
-
+        try {
+            Main.manager.mousePressed(nativeMouseEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void nativeMouseReleased(NativeMouseEvent nativeMouseEvent) {
-
+        try {
+            Main.manager.mouseReleased(nativeMouseEvent);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
