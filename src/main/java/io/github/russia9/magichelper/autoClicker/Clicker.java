@@ -39,7 +39,7 @@ public class Clicker {
      * <p>Method that stops autoclicking</p>
      */
     public void stop() {
-        clicker.stop();
+        clicker.finish();
         alive = false;
     }
 }

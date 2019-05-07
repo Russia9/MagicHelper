@@ -1,19 +1,24 @@
 package io.github.russia9.magichelper;
 
 import io.github.russia9.magichelper.autoClicker.Clicker;
+import io.github.russia9.magichelper.lib.Helper;
+import io.github.russia9.magichelper.lib.Reference;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
+import java.awt.event.MouseEvent;
 
 /**
  * Class to manage NativeHook Events
  */
 class Manager {
     private static Clicker clicker;
-    private boolean middleMouseButtonPress;
+    private boolean middleMouseButton;
+    private int keyCode = -1;
+    private int mouseCode = -1;
 
     Manager() throws NativeHookException {
         clicker = new Clicker();
@@ -25,17 +30,31 @@ class Manager {
     }
 
     void mousePressed(NativeMouseEvent nativeMouseEvent) throws AWTException {
-
+        if (nativeMouseEvent.getButton() == Reference.AUTOCLICKER_DEFAULT_ACTIVATE_BUTTON) {
+            middleMouseButton = true;
+        }
     }
 
     void mouseReleased(NativeMouseEvent nativeMouseEvent) throws AWTException {
-        if (nativeMouseEvent.getButton() == NativeMouseEvent.BUTTON3) {
+        if (nativeMouseEvent.getButton() == Reference.AUTOCLICKER_DEFAULT_ACTIVATE_BUTTON) {
             if (clicker.isAlive()) {
                 clicker.stop();
             } else {
-                clicker.start();
+                if (keyCode == -1 && mouseCode == -1) {
+                    clicker.start();
+                } else if (mouseCode != -1) {
+                    clicker.start(0, mouseCode, Reference.AUTOCLICKER_DEFAULT_CLICK_TIME);
+                } else {
+                    clicker.start(1, keyCode, Reference.AUTOCLICKER_DEFAULT_CLICK_TIME);
+                }
             }
-            middleMouseButtonPress = false;
+            middleMouseButton = false;
+        } else {
+            if (middleMouseButton) {
+                mouseCode = MouseEvent.getMaskForButton(nativeMouseEvent.getButton());
+            } else {
+                mouseCode = -1;
+            }
         }
     }
 
@@ -44,6 +63,10 @@ class Manager {
     }
 
     void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
-
+        if (middleMouseButton) {
+            keyCode = Helper.getJavaKeyEvent(nativeKeyEvent);
+        } else {
+            keyCode = -1;
+        }
     }
 }

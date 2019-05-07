@@ -15,8 +15,8 @@ $ java -jar MagicHelper.jar
 1. **Autoclicker** `TODO`
    - Mouse button 1 `DONE`
      - On/Off - Middle mouse button 
-   - Custom button
-     - On - Middle mouse button + Right button
+   - Custom button `DONE`
+     - On - Middle mouse button + Needed button
      - Off -  Middle mouse button
 2. **Auto mining**
    - Horizontal mining

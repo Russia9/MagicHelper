@@ -37,7 +37,7 @@ public class ClickerThread extends Thread {
                     case 1: // Keyboard
                         clicker.keyPress(button);
                         Thread.sleep(time);
-                        clicker.keyPress(button);
+                        clicker.keyRelease(button);
                         break;
                     default:
                         System.err.println("Unknown type. Check org.russia9.autoClicker.ClickerThread class");
@@ -47,7 +47,6 @@ public class ClickerThread extends Thread {
                 e.printStackTrace();
             }
         }
-        clicker.mouseRelease(button);
         alive = false;
     }
 }
