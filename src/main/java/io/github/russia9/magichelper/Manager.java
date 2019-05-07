@@ -1,10 +1,10 @@
-package org.russia9;
+package io.github.russia9.magichelper;
 
+import io.github.russia9.magichelper.autoClicker.Clicker;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
-import org.russia9.autoClicker.Clicker;
 
 import java.awt.*;
 

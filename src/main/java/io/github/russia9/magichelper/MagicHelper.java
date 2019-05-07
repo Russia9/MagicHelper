@@ -1,4 +1,4 @@
-package org.russia9;
+package io.github.russia9.magichelper;
 
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
@@ -6,11 +6,11 @@ import org.jnativehook.NativeHookException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Main {
+public class MagicHelper {
     static Manager manager;
 
     public static void main(String[] args) throws NativeHookException, InterruptedException {
-        System.out.println("MagicHelper v0.1-SNAPSHOT by Russia9");
+        System.out.println("MagicHelper v0.1 by Russia9");
         System.out.println("For more information: https://github.com/Russia9/MagicHelper");
 
         System.err.println("MagicHelper v0.1 doesn't have full functional");

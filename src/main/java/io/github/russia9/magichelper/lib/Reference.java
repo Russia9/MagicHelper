@@ -1,4 +1,4 @@
-package org.russia9.lib;
+package io.github.russia9.magichelper.lib;
 
 import java.awt.event.InputEvent;
 import java.awt.event.MouseEvent;

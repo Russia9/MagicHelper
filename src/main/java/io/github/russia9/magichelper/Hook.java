@@ -1,4 +1,4 @@
-package org.russia9;
+package io.github.russia9.magichelper;
 
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
@@ -25,7 +25,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
         try {
-            Main.manager.keyPressed(nativeKeyEvent);
+            MagicHelper.manager.keyPressed(nativeKeyEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -34,7 +34,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
         try {
-            Main.manager.keyReleased(nativeKeyEvent);
+            MagicHelper.manager.keyReleased(nativeKeyEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -48,7 +48,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeMousePressed(NativeMouseEvent nativeMouseEvent) {
         try {
-            Main.manager.mousePressed(nativeMouseEvent);
+            MagicHelper.manager.mousePressed(nativeMouseEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -57,7 +57,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeMouseReleased(NativeMouseEvent nativeMouseEvent) {
         try {
-            Main.manager.mouseReleased(nativeMouseEvent);
+            MagicHelper.manager.mouseReleased(nativeMouseEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }

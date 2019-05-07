@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.russia9</groupId>
+    <groupId>io.github.russia9</groupId>
     <artifactId>MagicHelper</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1-dev</version>
 
     <dependencies>
         <dependency>
@@ -60,7 +60,7 @@
                                 <transformers>
                                     <transformer
                                             implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                        <mainClass>Main</mainClass>
+                                        <mainClass>MagicHelper</mainClass>
                                     </transformer>
                                 </transformers>
                                 <shadedArtifactAttached>true</shadedArtifactAttached>

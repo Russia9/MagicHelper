@@ -1,9 +1,9 @@
-package org.russia9.autoClicker;
+package io.github.russia9.magichelper.autoClicker;
 
 import java.awt.*;
 
-import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON;
-import static org.russia9.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_TIME;
+import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON;
+import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_TIME;
 
 public class Clicker {
     boolean alive = false;
