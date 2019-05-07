@@ -12,6 +12,6 @@ public class Reference {
     public static final int AUTOCLICKER_DEFAULT_CLICK_BUTTON = InputEvent.getMaskForButton(1);
 
     // Constants
-    public static final int AUTOCLICKER_DEFAULT_CLICK_TIME = 500;
+    public static final int AUTOCLICKER_DEFAULT_CLICK_TIME = 20;
 
 }
