@@ -6,6 +6,9 @@ import org.jnativehook.NativeHookException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Main class
+ */
 public class MagicHelper {
     static Manager manager;
 

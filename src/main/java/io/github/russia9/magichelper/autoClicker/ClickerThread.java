@@ -2,6 +2,9 @@ package io.github.russia9.magichelper.autoClicker;
 
 import java.awt.*;
 
+/**
+ * AutoClicker Thread
+ */
 public class ClickerThread extends Thread {
     boolean alive = false;
     private int type, button, time;

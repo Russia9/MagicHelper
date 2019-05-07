@@ -5,6 +5,9 @@ import java.awt.*;
 import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON;
 import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_TIME;
 
+/**
+ * Class to manage AutoClicker thread
+ */
 public class Clicker {
     boolean alive = false;
     private ClickerThread clicker;

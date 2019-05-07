@@ -9,7 +9,7 @@ import java.awt.*;
 
 
 /**
- * <p>Class for capture key combinations.</p>
+ * Class for capture key combinations.
  *
  * @author Russia9
  * @since 0.1-SNAPSHOT

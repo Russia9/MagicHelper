@@ -8,6 +8,9 @@ import org.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
 
+/**
+ * Class to manage NativeHook Events
+ */
 class Manager {
     private static Clicker clicker;
     private boolean middleMouseButtonPress;
