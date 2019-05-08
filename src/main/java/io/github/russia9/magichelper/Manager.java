@@ -114,6 +114,8 @@ public class Manager {
                 case NativeKeyEvent.VC_S: // Smart mining
                     miner.start(2);
                     break;
+                default:
+                    break;
             }
             minerKeyCode = -1;
             autoMinerButton = false;

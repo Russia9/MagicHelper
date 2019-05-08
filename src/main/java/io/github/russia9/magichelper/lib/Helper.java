@@ -511,6 +511,8 @@ public class Helper {
                 keyCode = KeyEvent.VK_CUT;
                 break;
             // End Sun keyboards
+            default:
+                break;
         }
 
         return keyCode;
