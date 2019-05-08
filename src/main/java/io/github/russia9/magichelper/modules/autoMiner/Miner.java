@@ -13,7 +13,7 @@ public class Miner {
      *             2 for Smart
      */
     public void start(int type) throws AWTException {
-        if(miner!=null) {
+        if (miner != null) {
             if (!miner.isAlive()) {
                 miner = new MinerThread(type);
                 miner.start();

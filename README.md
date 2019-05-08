@@ -22,8 +22,8 @@ $ java -jar MagicHelper.jar
    - Custom button `DONE`
      - On - Middle mouse button + Needed button
      - Off -  Middle mouse button
-2. **Auto mining** `TODO`
-   - Horizontal mining `DOING`
+2. **Auto mining** `WIP`
+   - Horizontal mining `WIP`
      - On - RAlt + W
      - Off - Middle mouse button
    - Vertical mining
