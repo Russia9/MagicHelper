@@ -23,12 +23,12 @@ $ java -jar MagicHelper.jar
      - On - Middle mouse button + Needed button
      - Off -  Middle mouse button
 2. **Auto mining** `TODO`
-   - Horizontal mining
-     - On - RControl + W
+   - Horizontal mining `DOING`
+     - On - RAlt + W
      - Off - Middle mouse button
    - Vertical mining
-     - On - RControl + D
+     - On - RAlt + D
      - Off - Middle mouse button
    - Smart mining
-     - On - RControl + S
+     - On - RAlt + S
      - Off - Middle mouse button

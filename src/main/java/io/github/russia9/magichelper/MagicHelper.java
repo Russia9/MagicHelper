@@ -16,10 +16,10 @@ public class MagicHelper {
     static Manager manager;
 
     public static void main(String[] args) throws NativeHookException, InterruptedException {
-        System.out.println("MagicHelper v0.1 by Russia9");
+        System.out.println("MagicHelper v0.1.5 by Russia9");
         System.out.println("For more information: https://github.com/Russia9/MagicHelper");
 
-        System.err.println("MagicHelper v0.1 doesn't have full functional");
+        System.err.println("MagicHelper v0.1.5 doesn't have full functional");
 
         if(SystemUtils.IS_OS_WINDOWS) {
             Reference.AUTOCLICKER_DEFAULT_ACTIVATE_BUTTON = MouseEvent.BUTTON3;
