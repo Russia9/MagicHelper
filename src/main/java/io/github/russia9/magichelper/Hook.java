@@ -15,7 +15,11 @@ import java.awt.*;
  * @since 0.1-SNAPSHOT
  */
 public class Hook implements NativeKeyListener, NativeMouseInputListener {
+    private Manager manager;
 
+    public Hook(Manager manager) {
+        this.manager = manager;
+    }
 
     @Override
     public void nativeKeyTyped(NativeKeyEvent nativeKeyEvent) {
@@ -25,7 +29,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
         try {
-            MagicHelper.manager.keyPressed(nativeKeyEvent);
+            manager.keyPressed(nativeKeyEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -34,7 +38,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
         try {
-            MagicHelper.manager.keyReleased(nativeKeyEvent);
+            manager.keyReleased(nativeKeyEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -48,7 +52,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeMousePressed(NativeMouseEvent nativeMouseEvent) {
         try {
-            MagicHelper.manager.mousePressed(nativeMouseEvent);
+            manager.mousePressed(nativeMouseEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -57,7 +61,7 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
     @Override
     public void nativeMouseReleased(NativeMouseEvent nativeMouseEvent) {
         try {
-            MagicHelper.manager.mouseReleased(nativeMouseEvent);
+            manager.mouseReleased(nativeMouseEvent);
         } catch (AWTException e) {
             e.printStackTrace();
         }

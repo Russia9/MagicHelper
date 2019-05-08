@@ -6,7 +6,6 @@ import java.awt.*;
  * AutoClicker Thread
  */
 public class ClickerThread extends Thread {
-    private boolean alive = false;
     private boolean stop = false;
     private int type, button, time;
     private Robot clicker;
@@ -19,7 +18,7 @@ public class ClickerThread extends Thread {
         this.setName("Autoclicker Thread");
     }
 
-    void finish() {
+    public void finish() {
         stop = true;
     }
 
@@ -41,6 +40,7 @@ public class ClickerThread extends Thread {
                     break;
                 default:
                     System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoclicker.ClickerThread class");
+                    break;
             }
         }
     }

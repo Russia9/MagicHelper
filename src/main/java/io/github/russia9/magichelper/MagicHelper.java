@@ -10,7 +10,6 @@ import java.util.logging.Logger;
  * Initialisation class
  */
 public class MagicHelper {
-    static Manager manager;
 
     public static void main(String[] args) throws NativeHookException {
         System.out.println("MagicHelper v0.2 by Russia9");
@@ -23,6 +22,6 @@ public class MagicHelper {
         logger.setLevel(Level.WARNING);
         logger.setUseParentHandlers(false);
 
-        manager = new Manager();
+        new Manager();
     }
 }
