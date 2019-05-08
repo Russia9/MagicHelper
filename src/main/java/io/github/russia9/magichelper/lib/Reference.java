@@ -1,6 +1,7 @@
 package io.github.russia9.magichelper.lib;
 
 import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -8,10 +9,27 @@ import java.awt.event.MouseEvent;
  */
 public class Reference {
     // Default buttons
-    public static int AUTOCLICKER_DEFAULT_ACTIVATE_BUTTON = MouseEvent.BUTTON2;
+    /**
+     * Default *NIX and MAC autoclicker activation button
+     */
+    public static final int AUTOCLICKER_DEFAULT_NIX_ACTIVATE_BUTTON = MouseEvent.BUTTON2;
+    /**
+     * Default Windows autoclicker activation button
+     */
+    public static final int AUTOCLICKER_DEFAULT_WIN_ACTIVATE_BUTTON = MouseEvent.BUTTON3;
+    /**
+     * Default autoclicker click button
+     */
     public static final int AUTOCLICKER_DEFAULT_CLICK_BUTTON = InputEvent.getMaskForButton(1);
+    /**
+     * Default time between clicks
+     */
+    public static final int AUTOCLICKER_DEFAULT_CLICK_TIME = 20;
 
     // Constants
-    public static final int AUTOCLICKER_DEFAULT_CLICK_TIME = 20;
+    /**
+     * Default AutoMiner activation button
+     */
+    public static int AUTOMINER_DEFAULT_ACTIVATE_BUTTON = KeyEvent.VK_F4;
 
 }

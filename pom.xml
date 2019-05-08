@@ -6,8 +6,8 @@
 
     <groupId>io.github.russia9</groupId>
     <artifactId>MagicHelper</artifactId>
-    <version>0.1.5</version>
-    <name>MagicHelper!</name>
+    <version>0.2</version>
+    <name>MagicHelper</name>
 
     <dependencies>
         <dependency>

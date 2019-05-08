@@ -25,7 +25,8 @@ public class MinerThread extends Thread {
         while (!stop) {
             switch (type) {
                 case 0: // Horizontal mining
-
+                    miner.mouseMove(1000, 500);
+                    miner.delay(1000);
                     break;
                 case 1: // Vertical mining
 

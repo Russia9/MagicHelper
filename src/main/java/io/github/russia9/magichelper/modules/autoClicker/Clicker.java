@@ -1,9 +1,9 @@
 package io.github.russia9.magichelper.modules.autoClicker;
 
+import io.github.russia9.magichelper.Manager;
+
 import java.awt.*;
 
-import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON;
-import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CLICK_TIME;
 
 /**
  * Class to manage AutoClicker thread
@@ -11,6 +11,11 @@ import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CL
 public class Clicker {
     private boolean alive = false;
     private ClickerThread clicker;
+    private Manager manager;
+
+    public Clicker(Manager manager) {
+        this.manager = manager;
+    }
 
     /**
      * <p>Method that starts autoclicking</p>
@@ -28,7 +33,7 @@ public class Clicker {
     }
 
     public void start() throws AWTException {
-        start(0, AUTOCLICKER_DEFAULT_CLICK_BUTTON, AUTOCLICKER_DEFAULT_CLICK_TIME);
+        start(0, manager.getAutoclickerClickButton(), manager.getAutoclickerClickTime());
     }
 
     public boolean isAlive() {
@@ -36,7 +41,7 @@ public class Clicker {
     }
 
     /**
-     * <p>Method that stops autoclicking</p>
+     * <p>Method that stops autoclicker/p>
      */
     public void stop() {
         clicker.finish();
