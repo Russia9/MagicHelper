@@ -50,13 +50,13 @@ public class Manager {
 
         // Registering events
         GlobalScreen.registerNativeHook();
-        Hook hook = new Hook();
+        Hook hook = new Hook(this);
         GlobalScreen.addNativeMouseListener(hook);
         GlobalScreen.addNativeMouseMotionListener(hook);
         GlobalScreen.addNativeKeyListener(hook);
     }
 
-    void mousePressed(NativeMouseEvent nativeMouseEvent) throws AWTException {
+    public void mousePressed(NativeMouseEvent nativeMouseEvent) throws AWTException {
         if (nativeMouseEvent.getButton() == autoclickerActivateButton) {
             mainButton = true;
         } else {
@@ -68,7 +68,7 @@ public class Manager {
         }
     }
 
-    void mouseReleased(NativeMouseEvent nativeMouseEvent) throws AWTException {
+    public void mouseReleased(NativeMouseEvent nativeMouseEvent) throws AWTException {
         if (nativeMouseEvent.getButton() == autoclickerActivateButton) {
             if (clicker.isAlive()) {
                 clicker.stop();
@@ -90,7 +90,7 @@ public class Manager {
         }
     }
 
-    void keyPressed(NativeKeyEvent nativeKeyEvent) throws AWTException {
+    public void keyPressed(NativeKeyEvent nativeKeyEvent) throws AWTException {
         if (mainButton) {
             keyCode = Helper.getKeyCode(nativeKeyEvent);
         } else if (autoMinerButton) {
@@ -102,7 +102,7 @@ public class Manager {
         }
     }
 
-    void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
+    public void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
         if (Helper.getKeyCode(nativeKeyEvent) == autoclickerActivateButton) {
             switch (minerKeyCode) {
                 case 87: // Horizontal mining

@@ -16,7 +16,7 @@ public class MinerThread extends Thread {
         this.setName("AutoMiner Thread");
     }
 
-    void finish() {
+    public void finish() {
         stop = true;
     }
 
@@ -29,13 +29,14 @@ public class MinerThread extends Thread {
                     miner.delay(1000);
                     break;
                 case 1: // Vertical mining
-
+                    // TODO: Vertical mining
                     break;
                 case 2: // Smart mining
-
+                    // TODO: Smart mining
                     break;
                 default:
                     System.err.println("Unknown type. Check org.russia9.magichelper.modules.autominer.MinerThread class");
+                    break;
             }
         }
     }

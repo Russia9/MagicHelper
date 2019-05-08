@@ -1,9 +1,8 @@
 # MagicHelper [![Build Status](https://travis-ci.com/Russia9/MagicHelper.svg?branch=master)](https://travis-ci.com/Russia9/MagicHelper) 
 An optional assistant to Minecraft Magic servers or single
-#### Disclaimers
+### Disclaimers
 Many servers will regard this as a cheat. The authors are not 
 responsible for any use and do not recommend using it in multiplayer.
-
 
 ## Requirements
 This project requires installed java 8 or last
