@@ -29,13 +29,15 @@ public class ClickerThread extends Thread {
             switch (type) {
                 case 0: // Mouse
                     clicker.mousePress(button);
-                    clicker.delay(time);
+                    clicker.delay(10);
                     clicker.mouseRelease(button);
+                    clicker.delay(time);
                     break;
                 case 1: // Keyboard
                     clicker.keyPress(button);
-                    clicker.delay(time);
+                    clicker.delay(10);
                     clicker.keyRelease(button);
+                    clicker.delay(time);
                     break;
                 default:
                     System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoClicker.ClickerThread class");

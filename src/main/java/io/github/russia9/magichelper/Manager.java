@@ -1,6 +1,5 @@
 package io.github.russia9.magichelper;
 
-import com.sun.istack.internal.NotNull;
 import io.github.russia9.magichelper.lib.Helper;
 import io.github.russia9.magichelper.lib.Reference;
 import io.github.russia9.magichelper.modules.autoClicker.Clicker;
@@ -57,7 +56,7 @@ public class Manager {
         GlobalScreen.addNativeKeyListener(hook);
     }
 
-    void mousePressed(@NotNull NativeMouseEvent nativeMouseEvent) throws AWTException {
+    void mousePressed(NativeMouseEvent nativeMouseEvent) throws AWTException {
         if (nativeMouseEvent.getButton() == autoclickerActivateButton) {
             mainButton = true;
         } else {
@@ -69,7 +68,7 @@ public class Manager {
         }
     }
 
-    void mouseReleased(@NotNull NativeMouseEvent nativeMouseEvent) throws AWTException {
+    void mouseReleased(NativeMouseEvent nativeMouseEvent) throws AWTException {
         if (nativeMouseEvent.getButton() == autoclickerActivateButton) {
             if (clicker.isAlive()) {
                 clicker.stop();
@@ -91,7 +90,7 @@ public class Manager {
         }
     }
 
-    void keyPressed(@NotNull NativeKeyEvent nativeKeyEvent) throws AWTException {
+    void keyPressed(NativeKeyEvent nativeKeyEvent) throws AWTException {
         if (mainButton) {
             keyCode = Helper.getKeyCode(nativeKeyEvent);
         } else if (autoMinerButton) {
@@ -103,7 +102,7 @@ public class Manager {
         }
     }
 
-    void keyReleased(@NotNull NativeKeyEvent nativeKeyEvent) throws AWTException {
+    void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
         if (Helper.getKeyCode(nativeKeyEvent) == autoclickerActivateButton) {
             switch (minerKeyCode) {
                 case 87: // Horizontal mining

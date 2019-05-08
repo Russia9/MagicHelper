@@ -13,10 +13,10 @@ public class MagicHelper {
     static Manager manager;
 
     public static void main(String[] args) throws NativeHookException {
-        System.out.println("MagicHelper v0.1.5 by Russia9");
+        System.out.println("MagicHelper v0.2 by Russia9");
         System.out.println("For more information: https://github.com/Russia9/MagicHelper");
 
-        System.err.println("MagicHelper v0.1.5 doesn't have full functional");
+        System.err.println("MagicHelper v0.2 doesn't have full functional");
 
         // Disabling standard jnativehook logging
         Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
