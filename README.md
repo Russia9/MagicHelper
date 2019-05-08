@@ -1,5 +1,9 @@
 # MagicHelper
 An optional assistant to Minecraft Magic servers or single
+#### Disclaimers
+Many servers will regard this as a cheat. The authors are not 
+responsible for any use and do not recommend using it in multiplayer.
+
 
 ## Requirements
 This project requires installed java 8 or last
@@ -7,7 +11,7 @@ This project requires installed java 8 or last
 ## Installation
 Download jar from releases page, run and enjoy:) <br>
 **It's better to start jar from from console**:
-```
+```Shell
 $ java -jar MagicHelper.jar
 ```
 
