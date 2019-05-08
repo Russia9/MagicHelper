@@ -1,4 +1,4 @@
-# MagicHelper [![Build Status](https://travis-ci.com/Russia9/MagicHelper.svg?branch=master)](https://travis-ci.com/Russia9/MagicHelper) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d7d05b76675242248ce2d6009be97010)](https://app.codacy.com/app/Russia9/MagicHelper?utm_source=github.com&utm_medium=referral&utm_content=Russia9/MagicHelper&utm_campaign=Badge_Grade_Dashboard) 
+# MagicHelper [![Build Status](https://travis-ci.com/Russia9/MagicHelper.svg?branch=master)](https://travis-ci.com/Russia9/MagicHelper) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d7d05b76675242248ce2d6009be97010)](https://app.codacy.com/app/Russia9/MagicHelper?utm_source=github.com&utm_medium=referral&utm_content=Russia9/MagicHelper&utm_campaign=Badge_Grade_Dashboard) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 An optional assistant to Minecraft Magic servers or single
 ### Disclaimers
 Many servers will regard this as a cheat. The authors are not 
