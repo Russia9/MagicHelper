@@ -17,8 +17,8 @@ import java.awt.event.MouseEvent;
  * Main class
  */
 public class Manager {
-    private static Clicker clicker;
-    private static Miner miner;
+    private Clicker clicker;
+    private Miner miner;
 
     private int autoclickerActivateButton;
     private int autoMinerActivateButton;
