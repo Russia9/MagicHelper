@@ -1,4 +1,4 @@
-package io.github.russia9.magichelper.modules.autoMiner;
+package io.github.russia9.magichelper.modules.autominer;
 
 import java.awt.*;
 

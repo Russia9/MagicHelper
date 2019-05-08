@@ -1,4 +1,4 @@
-package io.github.russia9.magichelper.modules.autoMiner;
+package io.github.russia9.magichelper.modules.autominer;
 
 import java.awt.*;
 
@@ -35,7 +35,7 @@ public class MinerThread extends Thread {
 
                     break;
                 default:
-                    System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoMiner.MinerThread class");
+                    System.err.println("Unknown type. Check org.russia9.magichelper.modules.autominer.MinerThread class");
             }
         }
     }
