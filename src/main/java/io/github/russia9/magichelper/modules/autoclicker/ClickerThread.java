@@ -1,4 +1,4 @@
-package io.github.russia9.magichelper.modules.autoClicker;
+package io.github.russia9.magichelper.modules.autoclicker;
 
 import java.awt.*;
 
@@ -40,7 +40,7 @@ public class ClickerThread extends Thread {
                     clicker.delay(time);
                     break;
                 default:
-                    System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoClicker.ClickerThread class");
+                    System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoclicker.ClickerThread class");
             }
         }
     }

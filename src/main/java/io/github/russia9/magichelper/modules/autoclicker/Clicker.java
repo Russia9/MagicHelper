@@ -1,4 +1,4 @@
-package io.github.russia9.magichelper.modules.autoClicker;
+package io.github.russia9.magichelper.modules.autoclicker;
 
 import io.github.russia9.magichelper.Manager;
 

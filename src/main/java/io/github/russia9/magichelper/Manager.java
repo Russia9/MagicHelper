@@ -2,8 +2,8 @@ package io.github.russia9.magichelper;
 
 import io.github.russia9.magichelper.lib.Helper;
 import io.github.russia9.magichelper.lib.Reference;
-import io.github.russia9.magichelper.modules.autoClicker.Clicker;
-import io.github.russia9.magichelper.modules.autoMiner.Miner;
+import io.github.russia9.magichelper.modules.autoclicker.Clicker;
+import io.github.russia9.magichelper.modules.autominer.Miner;
 import org.apache.commons.lang3.SystemUtils;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
@@ -137,16 +137,16 @@ public class Manager {
     }
 
     /**
-     * Function to get autoMiner activation button
+     * Function to get autominer activation button
      *
-     * @return Current autoMiner activating button
+     * @return Current autominer activating button
      */
     public int getAutoMinerActivateButton() {
         return autoMinerActivateButton;
     }
 
     /**
-     * Function to set autoMiner activation button
+     * Function to set autominer activation button
      */
     public void setAutoMinerActivateButton(int autoMinerActivateButton) {
         this.autoMinerActivateButton = autoMinerActivateButton;

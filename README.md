@@ -1,4 +1,4 @@
-# MagicHelper
+# MagicHelper [![Build Status](https://travis-ci.com/Russia9/MagicHelper.svg?branch=master)](https://travis-ci.com/Russia9/MagicHelper) 
 An optional assistant to Minecraft Magic servers or single
 #### Disclaimers
 Many servers will regard this as a cheat. The authors are not 
