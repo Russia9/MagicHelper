@@ -3,7 +3,7 @@ package io.github.russia9.magichelper.modules.autoMiner;
 import java.awt.*;
 
 public class Miner {
-    boolean alive = false;
+    private boolean alive = false;
     private MinerThread miner;
 
     /**
@@ -16,5 +16,14 @@ public class Miner {
         miner = new MinerThread(type);
         miner.start();
         alive = true;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void stop() {
+        miner.finish();
+        alive = false;
     }
 }

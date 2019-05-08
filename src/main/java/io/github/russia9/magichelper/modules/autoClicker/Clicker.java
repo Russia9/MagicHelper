@@ -9,7 +9,7 @@ import static io.github.russia9.magichelper.lib.Reference.AUTOCLICKER_DEFAULT_CL
  * Class to manage AutoClicker thread
  */
 public class Clicker {
-    boolean alive = false;
+    private boolean alive = false;
     private ClickerThread clicker;
 
     /**

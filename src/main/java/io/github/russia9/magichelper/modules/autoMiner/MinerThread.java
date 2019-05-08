@@ -6,12 +6,11 @@ import java.awt.*;
  * AutoMiner Thread
  */
 public class MinerThread extends Thread {
-    private boolean alive = false;
     private boolean stop = false;
     private int type;
     private Robot miner;
 
-    public MinerThread(int type) throws AWTException {
+    MinerThread(int type) throws AWTException {
         this.type = type;
         miner = new Robot();
         this.setName("AutoMiner Thread");
@@ -23,7 +22,6 @@ public class MinerThread extends Thread {
 
     @Override
     public void run() {
-        alive = true;
         while (!stop) {
             switch (type) {
                 case 0: // Horizontal mining
@@ -36,9 +34,8 @@ public class MinerThread extends Thread {
 
                     break;
                 default:
-                    System.err.println("Unknown type. Check org.russia9.autoClicker.ClickerThread class");
+                    System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoMiner.MinerThread class");
             }
         }
-        alive = false;
     }
 }

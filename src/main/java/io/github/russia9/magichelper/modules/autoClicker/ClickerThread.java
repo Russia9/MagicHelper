@@ -25,7 +25,6 @@ public class ClickerThread extends Thread {
 
     @Override
     public void run() {
-        alive = true;
         while (!stop) {
             try {
                 switch (type) {
@@ -40,13 +39,12 @@ public class ClickerThread extends Thread {
                         clicker.keyRelease(button);
                         break;
                     default:
-                        System.err.println("Unknown type. Check org.russia9.autoClicker.ClickerThread class");
+                        System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoClicker.ClickerThread class");
                 }
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        alive = false;
     }
 }
