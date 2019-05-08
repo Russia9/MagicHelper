@@ -1,6 +1,6 @@
 package io.github.russia9.magichelper;
 
-import io.github.russia9.magichelper.autoClicker.Clicker;
+import io.github.russia9.magichelper.modules.autoClicker.Clicker;
 import io.github.russia9.magichelper.lib.Helper;
 import io.github.russia9.magichelper.lib.Reference;
 import org.jnativehook.GlobalScreen;

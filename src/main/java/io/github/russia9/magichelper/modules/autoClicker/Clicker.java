@@ -1,4 +1,4 @@
-package io.github.russia9.magichelper.autoClicker;
+package io.github.russia9.magichelper.modules.autoClicker;
 
 import java.awt.*;
 
