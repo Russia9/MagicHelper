@@ -1,4 +1,4 @@
-package io.github.russia9.magichelper.autoClicker;
+package io.github.russia9.magichelper.modules.autoClicker;
 
 import java.awt.*;
 
@@ -6,9 +6,9 @@ import java.awt.*;
  * AutoClicker Thread
  */
 public class ClickerThread extends Thread {
-    boolean alive = false;
-    private int type, button, time;
+    private boolean alive = false;
     private boolean stop = false;
+    private int type, button, time;
     private Robot clicker;
 
     ClickerThread(int type, int button, int time) throws AWTException {
@@ -19,13 +19,12 @@ public class ClickerThread extends Thread {
         this.setName("Autoclicker Thread");
     }
 
-    public void finish() {
+    void finish() {
         stop = true;
     }
 
     @Override
     public void run() {
-        alive = true;
         while (!stop) {
             try {
                 switch (type) {
@@ -40,13 +39,12 @@ public class ClickerThread extends Thread {
                         clicker.keyRelease(button);
                         break;
                     default:
-                        System.err.println("Unknown type. Check org.russia9.autoClicker.ClickerThread class");
+                        System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoClicker.ClickerThread class");
                 }
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        alive = false;
     }
 }

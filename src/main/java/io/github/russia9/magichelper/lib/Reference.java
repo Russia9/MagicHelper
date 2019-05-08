@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
  */
 public class Reference {
     // Default buttons
-    public static final int AUTOCLICKER_DEFAULT_ACTIVATE_BUTTON = MouseEvent.BUTTON2;
+    public static int AUTOCLICKER_DEFAULT_ACTIVATE_BUTTON = MouseEvent.BUTTON2;
     public static final int AUTOCLICKER_DEFAULT_CLICK_BUTTON = InputEvent.getMaskForButton(1);
 
     // Constants

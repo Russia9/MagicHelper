@@ -6,7 +6,7 @@
 
     <groupId>io.github.russia9</groupId>
     <artifactId>MagicHelper</artifactId>
-    <version>0.1</version>
+    <version>0.1.5</version>
     <name>MagicHelper!</name>
 
     <dependencies>
@@ -20,6 +20,11 @@
             <artifactId>junit</artifactId>
             <version>LATEST</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
         </dependency>
     </dependencies>
 
