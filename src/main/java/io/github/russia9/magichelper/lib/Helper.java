@@ -5,24 +5,13 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import java.awt.event.KeyEvent;
 
 public class Helper {
-    public static int getJavaKeyEvent(NativeKeyEvent nativeEvent) {
-        int keyLocation = KeyEvent.KEY_LOCATION_UNKNOWN;
-        switch (nativeEvent.getKeyLocation()) {
-            case NativeKeyEvent.KEY_LOCATION_STANDARD:
-
-            case NativeKeyEvent.KEY_LOCATION_LEFT:
-                keyLocation = KeyEvent.KEY_LOCATION_STANDARD;
-                break;
-
-            case NativeKeyEvent.KEY_LOCATION_NUMPAD:
-                keyLocation = KeyEvent.KEY_LOCATION_NUMPAD;
-                break;
-
-            case NativeKeyEvent.KEY_LOCATION_RIGHT:
-                keyLocation = KeyEvent.KEY_LOCATION_RIGHT;
-                break;
-        }
-
+    /**
+     * Function to get Java keyCode(VK) from library keyCode(VC)
+     *
+     * @param nativeEvent keyEvent
+     * @return Java KeyCode
+     */
+    public static int getKeyCode(NativeKeyEvent nativeEvent) {
         int keyCode = KeyEvent.VK_UNDEFINED;
         switch (nativeEvent.getKeyCode()) {
             case NativeKeyEvent.VC_ESCAPE:

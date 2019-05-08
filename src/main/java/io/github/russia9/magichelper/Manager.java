@@ -64,7 +64,7 @@ class Manager {
 
     void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
         if (middleMouseButton) {
-            keyCode = Helper.getJavaKeyEvent(nativeKeyEvent);
+            keyCode = Helper.getKeyCode(nativeKeyEvent);
         } else {
             keyCode = -1;
         }
