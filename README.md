@@ -5,7 +5,7 @@ Many servers will regard this as a cheat. The authors are not
 responsible for any use and do not recommend using it in multiplayer.
 
 ## Requirements
-This project requires installed java 8 or last
+ - `Java 1.8`
 
 ## Installation
 Download jar from releases page, run and enjoy:) <br>
