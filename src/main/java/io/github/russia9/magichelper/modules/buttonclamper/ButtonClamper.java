@@ -15,7 +15,7 @@ public class ButtonClamper {
      * @param button ButtonClamper will clamp those button
      */
     public void start(int type, int button) throws AWTException {
-        buttonClamperThread = new ButtonClamperThread(type, button);
+        buttonClamperThread = new ButtonClamperThread(button);
         buttonClamperThread.start();
         alive = true;
     }
