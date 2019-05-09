@@ -4,6 +4,7 @@ import io.github.russia9.magichelper.lib.Helper;
 import io.github.russia9.magichelper.lib.Reference;
 import io.github.russia9.magichelper.modules.autoclicker.Clicker;
 import io.github.russia9.magichelper.modules.autominer.Miner;
+import io.github.russia9.magichelper.modules.buttonclamper.ButtonClamper;
 import org.apache.commons.lang3.SystemUtils;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
@@ -11,6 +12,7 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -18,6 +20,7 @@ import java.awt.event.MouseEvent;
  */
 public class Manager {
     private Clicker clicker;
+    private ButtonClamper clamper;
     private Miner miner;
 
     private int autoclickerActivateButton;
@@ -36,6 +39,7 @@ public class Manager {
     Manager() throws NativeHookException {
         // Init clicker and miner
         clicker = new Clicker(this);
+        clamper = new ButtonClamper();
         miner = new Miner();
 
         // Default keys
@@ -103,10 +107,11 @@ public class Manager {
     }
 
     public void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
-        if (Helper.getKeyCode(nativeKeyEvent) == autoclickerActivateButton) {
+        if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             switch (minerKeyCode) {
                 case 87: // Horizontal mining
-                    miner.start(0);
+                    //miner.start(0);
+                    clamper.start(1, KeyEvent.VK_N);
                     break;
                 case NativeKeyEvent.VC_D: // Vertical mining
                     miner.start(1);
