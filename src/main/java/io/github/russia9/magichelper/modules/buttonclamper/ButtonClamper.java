@@ -1,17 +1,10 @@
 package io.github.russia9.magichelper.modules.buttonclamper;
 
-import io.github.russia9.magichelper.Manager;
-
 import java.awt.*;
 
 public class ButtonClamper {
     private boolean alive = false;
     private ButtonClamperThread buttonClamperThread;
-    private Manager manager;
-
-    public ButtonClamper(Manager manager) {
-        this.manager = manager;
-    }
 
     /**
      * <p>Method that starts clamping button</p>

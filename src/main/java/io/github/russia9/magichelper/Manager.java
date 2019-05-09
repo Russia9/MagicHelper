@@ -12,6 +12,7 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -38,7 +39,7 @@ public class Manager {
     Manager() throws NativeHookException {
         // Init clicker and miner
         clicker = new Clicker(this);
-        clamper = new ButtonClamper(this);
+        clamper = new ButtonClamper();
         miner = new Miner();
 
         // Default keys
@@ -109,7 +110,8 @@ public class Manager {
         if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             switch (minerKeyCode) {
                 case 87: // Horizontal mining
-                    miner.start(0);
+                    //miner.start(0);
+                    clamper.start(1, KeyEvent.VK_N);
                     break;
                 case NativeKeyEvent.VC_D: // Vertical mining
                     miner.start(1);
