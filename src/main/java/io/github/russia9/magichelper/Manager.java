@@ -14,6 +14,7 @@ import org.jnativehook.mouse.NativeMouseEvent;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.util.concurrent.locks.Condition;
 
 /**
  * Main class
@@ -78,6 +79,8 @@ public class Manager {
                 clicker.stop();
             } else if (miner.isAlive()) {
                 miner.stop();
+            } else if (clamper.isAlive()) {
+                clamper.stop();
             } else {
                 if (keyCode == -1 && mouseCode == -1) {
                     clicker.start();
@@ -111,7 +114,7 @@ public class Manager {
             switch (minerKeyCode) {
                 case 87: // Horizontal mining
                     //miner.start(0);
-                    clamper.start(1, KeyEvent.VK_N);
+                    clamper.start(0, KeyEvent.VK_N);
                     break;
                 case NativeKeyEvent.VC_D: // Vertical mining
                     miner.start(1);
