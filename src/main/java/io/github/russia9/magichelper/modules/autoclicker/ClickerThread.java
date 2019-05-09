@@ -28,13 +28,13 @@ public class ClickerThread extends Thread {
             switch (type) {
                 case 0: // Mouse
                     clicker.mousePress(button);
-                    clicker.delay(10);
+                    clicker.delay(6);
                     clicker.mouseRelease(button);
                     clicker.delay(time);
                     break;
                 case 1: // Keyboard
                     clicker.keyPress(button);
-                    clicker.delay(10);
+                    clicker.delay(6);
                     clicker.keyRelease(button);
                     clicker.delay(time);
                     break;
