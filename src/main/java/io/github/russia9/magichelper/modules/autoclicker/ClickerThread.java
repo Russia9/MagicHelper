@@ -24,24 +24,24 @@ public class ClickerThread extends Thread {
 
     @Override
     public void run() {
-        while (!stop) {
-            switch (type) {
-                case 0: // Mouse
+        switch (type) {
+            case 0: // Mouse
+                while (!stop) {
                     clicker.mousePress(button);
                     clicker.delay(6);
                     clicker.mouseRelease(button);
                     clicker.delay(time);
-                    break;
-                case 1: // Keyboard
+                }
+                break;
+            case 1: // Keyboard
+                while (!stop) {
                     clicker.keyPress(button);
                     clicker.delay(6);
                     clicker.keyRelease(button);
                     clicker.delay(time);
-                    break;
-                default:
-                    System.err.println("Unknown type. Check org.russia9.magichelper.modules.autoclicker.ClickerThread class");
-                    break;
-            }
+                }
+            default:
+                System.err.println("Unknown type");
         }
     }
 }
