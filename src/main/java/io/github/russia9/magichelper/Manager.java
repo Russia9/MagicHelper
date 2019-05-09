@@ -106,7 +106,7 @@ public class Manager {
     }
 
     public void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
-        if (Helper.getKeyCode(nativeKeyEvent) == autoclickerActivateButton) {
+        if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             switch (minerKeyCode) {
                 case 87: // Horizontal mining
                     miner.start(0);

@@ -1,8 +1,9 @@
 package io.github.russia9.magichelper.lib;
 
+import org.jnativehook.mouse.NativeMouseEvent;
+
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 
 /**
  * Default Constants
@@ -12,11 +13,11 @@ public class Reference {
     /**
      * Default *NIX and MAC autoclicker activation button
      */
-    public static final int AUTOCLICKER_DEFAULT_NIX_ACTIVATE_BUTTON = MouseEvent.BUTTON2;
+    public static final int AUTOCLICKER_DEFAULT_NIX_ACTIVATE_BUTTON = NativeMouseEvent.BUTTON2;
     /**
      * Default Windows autoclicker activation button
      */
-    public static final int AUTOCLICKER_DEFAULT_WIN_ACTIVATE_BUTTON = MouseEvent.BUTTON3;
+    public static final int AUTOCLICKER_DEFAULT_WIN_ACTIVATE_BUTTON = NativeMouseEvent.BUTTON3;
     /**
      * Default autoclicker click button
      */
