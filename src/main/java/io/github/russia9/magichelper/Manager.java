@@ -4,6 +4,7 @@ import io.github.russia9.magichelper.lib.Helper;
 import io.github.russia9.magichelper.lib.Reference;
 import io.github.russia9.magichelper.modules.autoclicker.Clicker;
 import io.github.russia9.magichelper.modules.autominer.Miner;
+import io.github.russia9.magichelper.modules.buttonclamper.ButtonClamper;
 import org.apache.commons.lang3.SystemUtils;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
@@ -18,6 +19,7 @@ import java.awt.event.MouseEvent;
  */
 public class Manager {
     private Clicker clicker;
+    private ButtonClamper clamper;
     private Miner miner;
 
     private int autoclickerActivateButton;
@@ -36,6 +38,7 @@ public class Manager {
     Manager() throws NativeHookException {
         // Init clicker and miner
         clicker = new Clicker(this);
+        clamper = new ButtonClamper(this);
         miner = new Miner();
 
         // Default keys
