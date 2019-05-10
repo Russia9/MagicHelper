@@ -10,14 +10,16 @@ public class ButtonClamper {
      * <p>Method that starts clamping button</p>
      *
      * @param type   type of click,
-     *               0 for mouse
-     *               1 for keyboard
+     *               0 for keyboard
+     *               1 for mouse
      * @param button ButtonClamper will clamp those button
      */
     public void start(int type, int button) throws AWTException {
-        buttonClamperThread = new ButtonClamperThread(button);
-        buttonClamperThread.start();
-        alive = true;
+        if (!isAlive()) {
+            buttonClamperThread = new ButtonClamperThread(type, button);
+            buttonClamperThread.start();
+            alive = true;
+        }
     }
 
     public boolean isAlive() {

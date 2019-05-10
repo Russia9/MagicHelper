@@ -26,11 +26,13 @@ public class Reference {
      * Default time between clicks
      */
     public static final int AUTOCLICKER_DEFAULT_CLICK_TIME = 20;
-
-    // Constants
     /**
      * Default AutoMiner activation button
      */
     public static int AUTOMINER_DEFAULT_ACTIVATE_BUTTON = KeyEvent.VK_F4;
+    /**
+     * Default AutoMiner activation button
+     */
+    public static int BUTTONCLAMPER_DEFAULT_ACTIVATE_BUTTON = KeyEvent.VK_F7;
 
 }

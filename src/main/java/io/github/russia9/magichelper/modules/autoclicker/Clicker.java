@@ -27,9 +27,11 @@ public class Clicker {
      * @param time   time between clicks
      */
     public void start(int type, int button, int time) throws AWTException {
-        clicker = new ClickerThread(type, button, time);
-        clicker.start();
-        alive = true;
+        if (!isAlive()) {
+            clicker = new ClickerThread(type, button, time);
+            clicker.start();
+            alive = true;
+        }
     }
 
     public void start() throws AWTException {

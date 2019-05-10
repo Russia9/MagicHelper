@@ -3,26 +3,38 @@ package io.github.russia9.magichelper.modules.buttonclamper;
 import java.awt.*;
 
 public class ButtonClamperThread extends Thread {
-    private int button;
+    private boolean stop = false;
+    private int type, button;
     private Robot clamper;
 
-    ButtonClamperThread(int button) throws AWTException {
+    ButtonClamperThread(int type, int button) throws AWTException {
+        this.type = type;
         this.button = button;
         clamper = new Robot();
     }
 
     public void finish() {
-        notify();
+        stop = true;
     }
 
     @Override
     public void run() {
-        clamper.mousePress(button);
-        try {
-            wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        switch (type) {
+            case 0:
+                clamper.keyPress(button);
+                clamper.delay(501);
+                while (!stop) {
+                    clamper.keyPress(button);
+                    clamper.delay(33);
+                }
+                break;
+            case 1:
+                clamper.mousePress(button);
+                while (!stop) ;
+                clamper.mouseRelease(button);
+                break;
+            default:
+                break;
         }
-        clamper.mouseRelease(button);
     }
 }

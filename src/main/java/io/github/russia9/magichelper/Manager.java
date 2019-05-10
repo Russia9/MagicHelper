@@ -12,7 +12,6 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -25,15 +24,19 @@ public class Manager {
 
     private int autoclickerActivateButton;
     private int autoMinerActivateButton;
+    private int buttonClamperActivateButton;
 
     private int autoclickerClickTime;
     private int autoclickerClickButton;
 
     private boolean mainButton;
     private boolean autoMinerButton;
+    private boolean clamperButton;
 
     private int keyCode = -1;
     private int minerKeyCode = -1;
+    private int clamperCode = -1;
+    private int clamperType;
     private int mouseCode = -1;
 
     Manager() throws NativeHookException {
@@ -49,6 +52,7 @@ public class Manager {
             setAutoclickerActivateButton(Reference.AUTOCLICKER_DEFAULT_NIX_ACTIVATE_BUTTON);
         }
         setAutoMinerActivateButton(Reference.AUTOMINER_DEFAULT_ACTIVATE_BUTTON);
+        setButtonClamperActivateButton(Reference.BUTTONCLAMPER_DEFAULT_ACTIVATE_BUTTON);
         setAutoclickerClickTime(Reference.AUTOCLICKER_DEFAULT_CLICK_TIME);
         setAutoclickerClickButton(Reference.AUTOCLICKER_DEFAULT_CLICK_BUTTON);
 
@@ -66,6 +70,9 @@ public class Manager {
         } else {
             if (mainButton) {
                 mouseCode = MouseEvent.getMaskForButton(nativeMouseEvent.getButton());
+            } else if (clamperButton) {
+                clamperType = 1;
+                clamperCode = MouseEvent.getMaskForButton(nativeMouseEvent.getButton());
             } else {
                 mouseCode = -1;
             }
@@ -78,6 +85,8 @@ public class Manager {
                 clicker.stop();
             } else if (miner.isAlive()) {
                 miner.stop();
+            } else if (clamper.isAlive()) {
+                clamper.stop();
             } else {
                 if (keyCode == -1 && mouseCode == -1) {
                     clicker.start();
@@ -99,10 +108,15 @@ public class Manager {
             keyCode = Helper.getKeyCode(nativeKeyEvent);
         } else if (autoMinerButton) {
             minerKeyCode = Helper.getKeyCode(nativeKeyEvent);
+        } else if (clamperButton) {
+            clamperCode = Helper.getKeyCode(nativeKeyEvent);
+            clamperType = 0;
         }
 
         if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             autoMinerButton = true;
+        } else if (Helper.getKeyCode(nativeKeyEvent) == buttonClamperActivateButton) {
+            clamperButton = true;
         }
     }
 
@@ -110,8 +124,7 @@ public class Manager {
         if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             switch (minerKeyCode) {
                 case 87: // Horizontal mining
-                    //miner.start(0);
-                    clamper.start(1, KeyEvent.VK_N);
+                    miner.start(0);
                     break;
                 case NativeKeyEvent.VC_D: // Vertical mining
                     miner.start(1);
@@ -124,6 +137,13 @@ public class Manager {
             }
             minerKeyCode = -1;
             autoMinerButton = false;
+        } else if (Helper.getKeyCode(nativeKeyEvent) == buttonClamperActivateButton) {
+            if (clamperCode != -1 && clamperType != -1) {
+                clamper.start(clamperType, clamperCode);
+            }
+            clamperCode = -1;
+            clamperType = -1;
+            clamperButton = false;
         }
     }
 
@@ -173,5 +193,13 @@ public class Manager {
 
     public void setAutoclickerClickButton(int autoclickerClickButton) {
         this.autoclickerClickButton = autoclickerClickButton;
+    }
+
+    public int getButtonClamperActivateButton() {
+        return buttonClamperActivateButton;
+    }
+
+    public void setButtonClamperActivateButton(int buttonClamperActivateButton) {
+        this.buttonClamperActivateButton = buttonClamperActivateButton;
     }
 }
