@@ -30,7 +30,7 @@ public class ButtonClamperThread extends Thread {
                 break;
             case 1:
                 clamper.mousePress(button);
-                while (!stop);
+                while (!stop) ;
                 clamper.mouseRelease(button);
                 break;
             default:

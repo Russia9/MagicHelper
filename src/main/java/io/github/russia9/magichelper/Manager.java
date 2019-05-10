@@ -12,9 +12,7 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-import java.util.concurrent.locks.Condition;
 
 /**
  * Main class
@@ -117,7 +115,7 @@ public class Manager {
 
         if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             autoMinerButton = true;
-        } else if(Helper.getKeyCode(nativeKeyEvent) == buttonClamperActivateButton) {
+        } else if (Helper.getKeyCode(nativeKeyEvent) == buttonClamperActivateButton) {
             clamperButton = true;
         }
     }
