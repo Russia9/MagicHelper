@@ -40,8 +40,10 @@ public class ClickerThread extends Thread {
                     clicker.keyRelease(button);
                     clicker.delay(time);
                 }
+                break;
             default:
                 System.err.println("Unknown type");
+                break;
         }
     }
 }
