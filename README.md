@@ -34,3 +34,10 @@ $ java -jar MagicHelper.jar
    - Smart mining
      - On - RAlt + S
      - Off - Middle mouse button
+
+## Used libraries
+ - `JNativeHook` used for listening global key combinations<br>
+ https://github.com/kwhat/jnativehook
+ - `log4j` used for logging events<br>
+ https://github.com/apache/log4j
+ 
