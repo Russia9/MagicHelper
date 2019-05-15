@@ -131,8 +131,10 @@ public class Manager {
 
         if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             autoMinerButton = true;
+            logger.trace("AutoMinerKey Pressed");
         } else if (Helper.getKeyCode(nativeKeyEvent) == buttonClamperActivateButton) {
             clamperButton = true;
+            logger.trace("ClamperKey Pressed");
         }
     }
 
@@ -156,6 +158,7 @@ public class Manager {
             }
             minerKeyCode = -1;
             autoMinerButton = false;
+            logger.trace("AutoMinerKey Released");
         } else if (Helper.getKeyCode(nativeKeyEvent) == buttonClamperActivateButton) {
             if (clamperCode != -1 && clamperType != -1) {
                 clamper.start(clamperType, clamperCode);
@@ -164,6 +167,7 @@ public class Manager {
             clamperCode = -1;
             clamperType = -1;
             clamperButton = false;
+            logger.trace("ClamperKey Released");
         }
     }
 
