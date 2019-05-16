@@ -1,25 +1,25 @@
 package io.github.russia9.magichelper;
 
+import org.apache.log4j.Logger;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Initialisation class
  */
 public class MagicHelper {
+    private static Logger logger = Logger.getLogger(MagicHelper.class.getName());
 
     public static void main(String[] args) throws NativeHookException {
-        System.out.println("MagicHelper v0.3 by Russia9");
-        System.out.println("For more information: https://github.com/Russia9/MagicHelper");
+        logger.info("MagicHelper v0.3.1 by Russia9");
+        logger.info("For more information: https://github.com/Russia9/MagicHelper");
 
-        System.err.println("MagicHelper v0.3 doesn't have full functional");
+        logger.warn("MagicHelper v0.3.1 doesn't have full functional");
 
         // Disabling standard jnativehook logging
-        Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
-        logger.setLevel(Level.WARNING);
+        java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GlobalScreen.class.getPackage().getName());
+        logger.setLevel(java.util.logging.Level.WARNING);
         logger.setUseParentHandlers(false);
 
         new Manager();
