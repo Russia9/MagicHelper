@@ -9,9 +9,9 @@ import java.awt.*;
  * Class to manage AutoClicker thread
  */
 public class Clicker {
+    private final Manager manager;
     private boolean alive = false;
     private ClickerThread clicker;
-    private Manager manager;
 
     public Clicker(Manager manager) {
         this.manager = manager;

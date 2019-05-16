@@ -19,11 +19,11 @@ import java.awt.event.MouseEvent;
  * Main class
  */
 public class Manager {
-    private static Logger logger = Logger.getLogger(Manager.class.getName());
+    private static final Logger logger = Logger.getLogger(Manager.class.getName());
 
-    private Clicker clicker;
-    private ButtonClamper clamper;
-    private Miner miner;
+    private final Clicker clicker;
+    private final ButtonClamper clamper;
+    private final Miner miner;
 
     private int autoclickerActivateButton;
     private int autoMinerActivateButton;

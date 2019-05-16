@@ -6,8 +6,10 @@ import java.awt.*;
  * AutoClicker Thread
  */
 public class ClickerThread extends Thread {
+    private final int type;
+    private final int button;
+    private final int time;
     private boolean stop = false;
-    private int type, button, time;
     private Robot clicker;
 
     ClickerThread(int type, int button, int time) throws AWTException {
