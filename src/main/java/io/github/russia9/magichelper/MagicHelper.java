@@ -1,6 +1,7 @@
 package io.github.russia9.magichelper;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 
@@ -9,7 +10,7 @@ import org.jnativehook.NativeHookException;
  * Initialisation class
  */
 public class MagicHelper {
-    private static final Logger logger = Logger.getLogger(MagicHelper.class.getName());
+    private static final Logger logger = LogManager.getLogger(MagicHelper.class.getName());
 
     public static void main(String[] args) throws NativeHookException {
         logger.info("MagicHelper v0.3.2 by Russia9");

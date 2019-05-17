@@ -37,6 +37,6 @@ $ java -jar MagicHelper.jar
 
 ## Used libraries
  - [`JNativeHook`](https://github.com/kwhat/jnativehook) - Listening key combinations
- - [`log4j`](https://github.com/apache/log4j) - Logging
+ - [`log4j2`](https://github.com/apache/logging-log4j2) - Logging
  - [`Apache Commons`](https://github.com/apache/commons-lang) - Detecting OS
  

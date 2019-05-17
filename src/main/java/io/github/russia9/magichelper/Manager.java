@@ -6,7 +6,8 @@ import io.github.russia9.magichelper.modules.autoclicker.Clicker;
 import io.github.russia9.magichelper.modules.autominer.Miner;
 import io.github.russia9.magichelper.modules.buttonclamper.ButtonClamper;
 import org.apache.commons.lang3.SystemUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
@@ -19,7 +20,7 @@ import java.awt.event.MouseEvent;
  * Main class
  */
 public class Manager {
-    private static final Logger logger = Logger.getLogger(Manager.class.getName());
+    private static final Logger logger = LogManager.getLogger(Manager.class.getName());
 
     private final Clicker clicker;
     private final ButtonClamper clamper;
