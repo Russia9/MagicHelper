@@ -15,7 +15,7 @@ import java.awt.*;
  * @since 0.1-SNAPSHOT
  */
 public class Hook implements NativeKeyListener, NativeMouseInputListener {
-    private Manager manager;
+    private final Manager manager;
 
     public Hook(Manager manager) {
         this.manager = manager;

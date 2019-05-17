@@ -6,8 +6,8 @@ import java.awt.*;
  * AutoMiner Thread
  */
 public class MinerThread extends Thread {
+    private final int type;
     private boolean stop = false;
-    private int type;
     private Robot miner;
 
     MinerThread(int type) throws AWTException {

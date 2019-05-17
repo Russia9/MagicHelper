@@ -3,8 +3,9 @@ package io.github.russia9.magichelper.modules.buttonclamper;
 import java.awt.*;
 
 public class ButtonClamperThread extends Thread {
+    private final int type;
+    private final int button;
     private boolean stop = false;
-    private int type, button;
     private Robot clamper;
 
     ButtonClamperThread(int type, int button) throws AWTException {

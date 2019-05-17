@@ -462,7 +462,7 @@ public class Helper {
                 keyCode = KeyEvent.VK_UNDERSCORE;
                 break;
 
-            //case VC_FURIGANA:
+            //case VC_JAPAN:
 
             case NativeKeyEvent.VC_KANJI:
                 keyCode = KeyEvent.VK_KANJI;

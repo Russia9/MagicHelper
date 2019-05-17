@@ -36,8 +36,7 @@ $ java -jar MagicHelper.jar
      - Off - Middle mouse button
 
 ## Used libraries
- - `JNativeHook` used for listening global key combinations<br>
- https://github.com/kwhat/jnativehook
- - `log4j` used for logging events<br>
- https://github.com/apache/log4j
+ - [`JNativeHook`](https://github.com/kwhat/jnativehook) - Listening key combinations
+ - [`log4j2`](https://github.com/apache/logging-log4j2) - Logging
+ - [`Apache Commons`](https://github.com/apache/commons-lang) - Detecting OS
  
