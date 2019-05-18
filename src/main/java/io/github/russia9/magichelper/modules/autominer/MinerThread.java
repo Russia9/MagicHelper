@@ -1,11 +1,16 @@
 package io.github.russia9.magichelper.modules.autominer;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.awt.*;
 
 /**
  * AutoMiner Thread
  */
 public class MinerThread extends Thread {
+    private static final Logger logger = LogManager.getLogger(MinerThread.class.getName());
+
     private final int type;
     private boolean stop = false;
     private Robot miner;
@@ -35,7 +40,7 @@ public class MinerThread extends Thread {
                     // TODO: Smart mining
                     break;
                 default:
-                    System.err.println("Unknown type. Check org.russia9.magichelper.modules.autominer.MinerThread class");
+                    logger.error("Unknown type");
                     break;
             }
         }
