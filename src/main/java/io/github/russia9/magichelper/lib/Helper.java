@@ -1,8 +1,10 @@
 package io.github.russia9.magichelper.lib;
 
+import org.jnativehook.GlobalScreen;
 import org.jnativehook.keyboard.NativeKeyEvent;
 
 import java.awt.event.KeyEvent;
+import java.util.logging.Logger;
 
 public class Helper {
     /**
@@ -516,5 +518,11 @@ public class Helper {
         }
 
         return keyCode;
+    }
+
+    public static void disableJNativeHookLog() {
+        Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
+        logger.setLevel(java.util.logging.Level.WARNING);
+        logger.setUseParentHandlers(false);
     }
 }
