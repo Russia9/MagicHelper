@@ -18,7 +18,6 @@ public class MagicHelper {
         logger.warn("MagicHelper v0.3.3 doesn't have full functional");
 
         Helper.disableJNativeHookLog();
-
         new Manager();
     }
 }
