@@ -14,6 +14,7 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -142,7 +143,7 @@ public class Manager {
     public void keyReleased(NativeKeyEvent nativeKeyEvent) throws AWTException {
         if (Helper.getKeyCode(nativeKeyEvent) == autoMinerActivateButton) {
             switch (minerKeyCode) {
-                case 87: // Horizontal mining
+                case KeyEvent.VK_W: // Horizontal mining
                     miner.start(0);
                     logger.debug("Miner(type: 0) started");
                     break;
