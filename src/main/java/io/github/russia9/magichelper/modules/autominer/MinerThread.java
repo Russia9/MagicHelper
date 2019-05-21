@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 /**
  * AutoMiner Thread
@@ -30,8 +31,16 @@ public class MinerThread extends Thread {
         while (!stop) {
             switch (type) {
                 case 0: // Horizontal mining
-                    miner.mouseMove(1000, 500);
-                    miner.delay(1000);
+                    miner.keyPress(KeyEvent.VK_CONTROL);
+                    miner.keyPress(KeyEvent.VK_V);
+                    miner.delay(100);
+                    miner.keyRelease(KeyEvent.VK_V);
+                    miner.keyRelease(KeyEvent.VK_CONTROL);
+                    miner.delay(100);
+                    miner.keyPress(KeyEvent.VK_ENTER);
+                    miner.delay(50);
+                    miner.keyRelease(KeyEvent.VK_ENTER);
+                    miner.delay(500);
                     break;
                 case 1: // Vertical mining
                     // TODO: Vertical mining
