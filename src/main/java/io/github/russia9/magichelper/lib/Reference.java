@@ -34,5 +34,4 @@ public class Reference {
      * Default AutoMiner activation button
      */
     public static final int BUTTONCLAMPER_DEFAULT_ACTIVATE_BUTTON = KeyEvent.VK_F7;
-
 }
