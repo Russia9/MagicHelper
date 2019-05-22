@@ -46,7 +46,6 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
 
     @Override
     public void nativeMouseClicked(NativeMouseEvent nativeMouseEvent) {
-
     }
 
     @Override
@@ -69,13 +68,10 @@ public class Hook implements NativeKeyListener, NativeMouseInputListener {
 
     @Override
     public void nativeMouseMoved(NativeMouseEvent nativeMouseEvent) {
-
     }
 
     @Override
     public void nativeMouseDragged(NativeMouseEvent nativeMouseEvent) {
 
     }
-
-
 }
