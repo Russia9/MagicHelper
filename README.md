@@ -15,7 +15,7 @@ $ java -jar MagicHelper.jar
 ```
 If you want to get debug output, run with command
 ```Shell
-$ java -jar MagicHelper.jar -Debug=true
+$ java -jar MagicHelper.jar Debug=true
 ```
 
 ## Controls
