@@ -17,9 +17,8 @@ public class MagicHelper {
             logger.trace(args[0]);
         }
 
-        logger.info("MagicHelper v0.3.3 by Russia9");
+        logger.info("MagicHelper v0.4 by Russia9");
         logger.info("For more information: https://github.com/Russia9/MagicHelper");
-        logger.warn("MagicHelper v0.3.3 doesn't have full functional");
 
         Helper.disableJNativeHookLog();
         new Manager();
