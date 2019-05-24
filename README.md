@@ -13,6 +13,10 @@ Download jar from releases page, run and enjoy:) <br>
 ```Shell
 $ java -jar MagicHelper.jar
 ```
+If you want to get debug output, run with command
+```Shell
+$ java -jar MagicHelper.jar -Debug=true
+```
 
 ## Controls
 1. **Autoclicker** `DONE`
