@@ -17,6 +17,10 @@ If you want to get debug output, run with command
 ```Shell
 $ java -jar MagicHelper.jar Debug=true
 ```
+If you want to get debug and trace output, run with command
+```Shell
+$ java -jar MagicHelper.jar Trace=true
+```
 
 ## Controls
 1. **Autoclicker** `DONE`
